@@ -8,9 +8,11 @@ import java.util.regex.Pattern;
  * @version - 16.0
  * @since   - 2021-10-13
  */
-
 public class UserRegistration {
 
+    /*
+    Created a method to validate first name
+     */
     public boolean firstName(String firstName) {
         String regex = "^[A-Z]{1}[a-z]{2,}$";
         Pattern pattern = Pattern.compile(regex);
@@ -19,8 +21,8 @@ public class UserRegistration {
     }
 
     /*
-       Created a method to validate last name
-        */
+    Created a method to validate last name
+     */
     public boolean lastName(String lastName) {
         String regex = "^[A-Z]{1}[a-z]{2,}$";
         Pattern pattern = Pattern.compile(regex);
@@ -29,8 +31,8 @@ public class UserRegistration {
     }
 
     /*
-       Created a method to validate E-mail
-        */
+    Created a method to validate E-mail
+     */
     public boolean email(String email) {
         String regex = "^[a-z0-9]{3,}+([_+-.][a-z0-9]{3,}+)*@[a-z0-9]+.[a-z]{2,3}+(.[a-z]{2,3}){0,1}$";
         Pattern pattern = Pattern.compile(regex);
@@ -39,15 +41,16 @@ public class UserRegistration {
     }
 
     /*
-       Created a method to validate Mobile Number Format
-       */
+    Created a method to validate Mobile Number Format
+    */
     public boolean phoneNumber(String phoneNumber) {
         String regex = "^[0-9]{2}\\s{1}[0-9]{10}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(phoneNumber);
         return matcher.matches();
     }
- /*
+
+    /*
     Created a method to validate password with minimum 8 character
     */
     public boolean password(String password) {
@@ -58,8 +61,8 @@ public class UserRegistration {
     }
 
     /*
-       Created a method to validate password with atleast one upper case
-       */
+    Created a method to validate password with atleast one upper case
+    */
     public boolean passwordRule2(String password) {
         String regex = "^(?=.*[A-Z]){1}(?=.*[a-z]).{8,}$";
         Pattern pattern = Pattern.compile(regex);
@@ -68,8 +71,8 @@ public class UserRegistration {
     }
 
     /*
-        Created a method to validate password with atleast one numeric value
-        */
+    Created a method to validate password with atleast one numeric value
+    */
     public boolean passwordRule3(String password) {
         String regex = "^(?=.*[A-Z]){1}(?=.*[a-z])(?=.*[0-9]).{8,}$";
         Pattern pattern = Pattern.compile(regex);
@@ -78,15 +81,14 @@ public class UserRegistration {
     }
 
     /*
-        Created a method to validate password with exactly one special character
-        */
+    Created a method to validate password with exactly one special character
+    */
     public boolean passwordRule4(String password) {
         String regex = "^(?=.*[A-Z]){1}(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%!]).{8,}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(password);
         return matcher.matches();
     }
-
 
     /*
     Created a method to validate email
@@ -98,3 +100,4 @@ public class UserRegistration {
         return matcher.matches();
     }
 }
+
